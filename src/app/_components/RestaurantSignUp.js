@@ -9,25 +9,25 @@ const RestaurantSignUp = () => {
             </h3>
             <div className="flex flex-col gap-4 justify-center mt-5">
                 <div>
-                    <input className="w-full p-3 bg-slate-300 rounded-sm" type="text" placeholder="Enter Your Email " />
+                    <input className="w-full p-3 bg-slate-200 rounded-sm" type="text" placeholder="Enter Your Email " />
                 </div>
                 <div>
-                    <input className="w-full p-3 bg-slate-300 rounded-sm" type="password" placeholder="Enter Your Password " />
+                    <input className="w-full p-3 bg-slate-200 rounded-sm" type="password" placeholder="Enter Your Password " />
                 </div>
                 <div>
-                    <input className="w-full p-3 bg-slate-300 rounded-sm" type="password" placeholder="Confirm Your Password " />
+                    <input className="w-full p-3 bg-slate-200 rounded-sm" type="password" placeholder="Confirm Your Password " />
                 </div>
                 <div>
-                    <input className="w-full p-3 bg-slate-300 rounded-sm" type="password" placeholder="Enter Your Address " />
+                    <input className="w-full p-3 bg-slate-200 rounded-sm" type="text" placeholder="Enter Your Address " />
                 </div>
                 <div>
-                    <input className="w-full p-3 bg-slate-300 rounded-sm" type="password" placeholder="Enter Your City " />
+                    <input className="w-full p-3 bg-slate-200 rounded-sm" type="text" placeholder="Enter Your City " />
                 </div>
                 <div>
-                    <input className="w-full p-3 bg-slate-300 rounded-sm" type="password" placeholder="Enter Your Contact No. " />
+                    <input className="w-full p-3 bg-slate-200 rounded-sm" type="number" placeholder="Enter Your Contact No. " />
                 </div>
                 <div className="flex justify-center items-center rounded-sm">
-                    <button className="bg-slate-600 text-white px-4 py-2 rounded-sm">
+                    <button className="bg-indigo-600 text-white px-4 py-2 rounded-sm">
                         Log in
                     </button>
                 </div>

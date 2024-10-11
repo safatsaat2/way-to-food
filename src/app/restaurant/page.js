@@ -12,7 +12,7 @@ const Restaurant = () => {
 
       <div className="flex justify-center items-center mt-5">
         <button
-          className="bg-slate-600 text-white px-4 py-2 rounded-sm max-w-[300px] mx-auto"
+          className="bg-indigo-600 text-white px-4 py-2 rounded-sm max-w-[300px] mx-auto"
           onClick={() => setLogin(!login)}
         >
           {login
