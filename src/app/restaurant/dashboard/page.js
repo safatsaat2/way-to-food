@@ -8,7 +8,7 @@ const Dashboard = () => {
       <RestaurantHeader />
       <div className="min-h-screen">
         <h3 className="text-3xl text-slate-900 text-center">
-          Restaurant Sign Up
+          Restaurant Dashboard
         </h3>
       </div>
       <RestaurantFooter />

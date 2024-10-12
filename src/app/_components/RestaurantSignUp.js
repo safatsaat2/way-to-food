@@ -50,7 +50,7 @@ const RestaurantSignUp = () => {
   
       delete result.password;
   
-      localStorage.setItem("user", JSON.stringify(result));
+      localStorage.setItem("restaurantUser", JSON.stringify(result));
       console.log("Redirecting to dashboard...");
       router.push("/restaurant/dashboard");
       alert("Restaurant Registration done");
