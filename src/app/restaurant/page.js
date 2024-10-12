@@ -2,10 +2,14 @@
 import { useState } from "react";
 import RestaurantLogin from "../_components/RestaurantLogin";
 import RestaurantSignUp from "../_components/RestaurantSignUp";
+import RestaurantHeader from "../_components/RestaurantHeader";
+import RestaurantFooter from "../_components/RestaurantFooter";
 
 const Restaurant = () => {
   const [login, setLogin] = useState(true);
   return (
+    <>
+    <RestaurantHeader/>
     <div className="flex justify-center flex-col py-20 bg-blue-200 min-h-screen ">
       <h1 className="text-5xl text-center text-slate-900">Welcome</h1>
       <div>{login ? <RestaurantLogin /> : <RestaurantSignUp />}</div>
@@ -21,6 +25,8 @@ const Restaurant = () => {
         </button>
       </div>
     </div>
+    <RestaurantFooter/>
+    </>
   );
 };
 

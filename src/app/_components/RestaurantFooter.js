@@ -4,7 +4,7 @@ import React from "react";
 
 const RestaurantFooter = () => {
   return (
-    <div className="bg-slate-900 text-white">
+    <header className="bg-slate-900 text-white">
       <div className="max-w-[1200px] px-4 flex justify-between items-center mx-auto py-2">
         <div className="footer-logo">
           <Image alt="logo" width={100} height={50} src="/100.png" />
@@ -22,7 +22,7 @@ const RestaurantFooter = () => {
           </li>
         </ul>
       </div>
-    </div>
+    </header>
   );
 };
 

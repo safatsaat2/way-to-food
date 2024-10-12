@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const RestaurantHeader = () => {
   return (
-    <div className="bg-gradient-to-r from-blue-200 to-indigo-300 text-slate-900">
+    <header className="bg-gradient-to-r from-blue-200 to-indigo-300 text-slate-900">
       <div className="max-w-[1200px] px-4 flex justify-between items-center mx-auto py-2">
       <div className="logo">
         <Image alt="logo" width={100} height={50} src="/100.png" />
@@ -20,7 +20,7 @@ const RestaurantHeader = () => {
         </li>
       </ul>
       </div>
-    </div>
+    </header>
   );
 };
 
