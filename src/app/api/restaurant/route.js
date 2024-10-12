@@ -22,3 +22,28 @@ export async function GET() {
     return NextResponse.json({ result: false, error: "Failed to fetch data" }, { status: 500 });
   }
 }
+
+export async function POST(request) {
+    try {
+      
+      const payload = await request.json();
+  
+      
+      if (mongoose.connection.readyState === 0) {
+        await mongoose.connect(connectionStr);
+      }
+  
+      
+      let restaurant = new restaurantSchema(payload);
+  
+      
+      const result = await restaurant.save();
+  
+      
+      return NextResponse.json({ result, success: true });
+    } catch (error) {
+      
+      console.error("Error saving restaurant:", error);
+      return NextResponse.json({ success: false, error: error.message }, { status: 500 });
+    }
+  }

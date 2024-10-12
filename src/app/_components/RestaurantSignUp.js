@@ -12,9 +12,43 @@ const RestaurantSignUp = () => {
     const [number, setNumber] = useState("");
 
 
-    const handleSignUp = ()=>{
-    console.log(email, name, password, cPassword, city, address, number)
-    }
+    const handleSignUp = async () => {
+        try {
+          // Ensure that the required fields are available
+          if (!email || !password || !address || !name || !city || !number) {
+            throw new Error("All fields are required");
+          }
+      
+          let result = await fetch("http://localhost:3000/api/restaurant", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json", // Specify JSON format
+            },
+            body: JSON.stringify({
+              email,
+              password,
+              address,
+              name,
+              city,
+              number,
+            }),
+          });
+      
+          // Check if the response is ok (status code in the range 200-299)
+          if (!result.ok) {
+            throw new Error(`Error: ${result.status}`);
+          }
+      
+          // Parse the result as JSON
+          const data = await result.json();
+      
+          alert("Restaurant Registration done");
+        } catch (error) {
+          // Handle errors (e.g., show a message to the user)
+          alert("Restaurant Registration Not done, something went wrong");
+        }
+      };
+      
 
 
     return (
