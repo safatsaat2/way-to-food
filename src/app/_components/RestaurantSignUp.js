@@ -28,7 +28,7 @@ const RestaurantSignUp = () => {
                 </div>
                 <div className="flex justify-center items-center rounded-sm">
                     <button className="bg-indigo-600 text-white px-4 py-2 rounded-sm">
-                        Log in
+                        Sign Up
                     </button>
                 </div>
             </div>
