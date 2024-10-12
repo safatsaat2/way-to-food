@@ -22,6 +22,11 @@ const RestaurantHeader = () => {
     }
   }, []);
 
+  const logout = () =>{
+    localStorage.removeItem("restaurantUser");
+    router.push("/restaurant");
+  }
+
   return (
     <header className="bg-gradient-to-r from-blue-200 to-indigo-300 text-slate-900">
       <div className="max-w-[1200px] px-4 flex justify-between items-center mx-auto py-2">
@@ -38,7 +43,7 @@ const RestaurantHeader = () => {
                 <Link href="/">Profile</Link>
               </li>
               <li>
-                <button className="btn">Log Out</button>
+                <button onClick={logout} className="btn">Log Out</button>
               </li>
             </>
            : 
