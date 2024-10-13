@@ -16,9 +16,13 @@ const RestaurantSignUp = () => {
     try {
       // Ensure that the required fields are available
       if (!email || !password || !address || !name || !city || !number) {
+        alert("Please fill all input");
         throw new Error("All fields are required");
       }
-  
+      else if( password !== cPassword){
+        alert("Password is not matched");
+        return;
+      }
       let response = await fetch("http://localhost:3000/api/restaurant", {
         method: "POST",
         headers: {
