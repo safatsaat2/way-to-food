@@ -5,10 +5,27 @@ const RestaurantLogin = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
-    const handleLogin = () =>{
+    const handleLogin = async () =>{
             if( !email || !password){
                 alert("please fill the form");
+            }else{
+
             }
+            let response = await fetch("http://localhost:3000/api/restaurant", {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json", // Specify JSON format
+                },
+                body: JSON.stringify({
+                  email,
+                  password,
+                  login:true
+                }),
+              });
+              response = await response.json();
+              if(response.success){
+                alert("Thank you for login")
+              }
     }
     return (
         <div className=" max-w-[600px] w-full mx-auto bg-white border p-10 mt-4 rounded-md">
